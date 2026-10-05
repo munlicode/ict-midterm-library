@@ -22,6 +22,7 @@ export const en = {
     home: "Home",
     search: "Search",
     about: "About",
+    rules: "Rules",
   },
 
   header: {
@@ -74,6 +75,19 @@ export const en = {
       "Need assistance finding course reserves or thesis materials? Visit the Information Desk",
     tipTitle: "Helpful Tip!",
     tipBody: "Don't forget to bring your identification ID to borrow a book!",
+    foodTitle: "",
+    foodBody: "",
+    quietTitle: "",
+    quietBody: "",
+  },
+  rules: {
+    title: "Rules",
+    body: "Be polite to the library staff and other users.",
+    foodTitle: "Food & Drinks",
+    foodBody:
+      "Only covered drinks and light snacks are allowed in designated areas.",
+    quietTitle: "Quiet Zone",
+    quietBody: "Keep noise to a minimum and set devices to silent mode.",
   },
 
   search: {

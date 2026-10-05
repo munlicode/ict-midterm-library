@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Home, Info, Search } from "lucide-react";
+import { Home, Info, List, Search } from "lucide-react";
 import type { Translations } from "../i18n";
 
 /**
@@ -31,6 +31,12 @@ export const NAV_ITEMS: NavItem[] = [
     labelKey: "about",
     icon: Info,
     activePrefixes: ["/about"],
+  },
+  {
+    to: "/rules",
+    labelKey: "rules",
+    icon: List,
+    activePrefixes: ["/rules"],
   },
 ];
 

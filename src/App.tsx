@@ -9,6 +9,7 @@ import { ExpiredPage } from "./pages/ExpiredPage";
 import { AboutPage } from "./pages/About";
 
 import { AppLayout } from "./components/Layout";
+import { RulesPage } from "./pages/Rules";
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -38,11 +39,16 @@ export function App() {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/book/:id" element={<BookPage />} />
           </Route>
+
           {/* Public pages: same layout, no sign-in required. */}
           <Route element={<AppLayout />}>
             <Route path="/about" element={<AboutPage />} />
           </Route>
+          <Route element={<AppLayout />}>
+            <Route path="/rules" element={<RulesPage />} />
+          </Route>
           <Route path="/expired" element={<ExpiredPage />} />
+
           {/* Catch-all fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

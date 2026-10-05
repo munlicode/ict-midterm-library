@@ -1,13 +1,8 @@
 import React from "react";
 import { HelpCircle, Info } from "lucide-react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "../components/ui/card";
 import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "../i18n";
+import { InfoCard } from "@/components/InfoCard";
 
 export const AboutPage: React.FC = () => {
   const { user } = useAuth();
@@ -31,59 +26,22 @@ export const AboutPage: React.FC = () => {
 
         {/* Quick Links / Info Section */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="bg-white border-border">
-            <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <Info className="h-5 w-5 text-primary" />
-              <CardTitle className="text-base font-bold text-foreground">
-                {labels.hoursTitle}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {labels.hoursBody}
-              </p>
-            </CardContent>
-          </Card>
+          <InfoCard
+            icon={<Info className="h-5 w-5 text-primary" />}
+            title={labels.hoursTitle}
+            body={labels.hoursBody}
+          />
 
-          <Card className="bg-white border-border">
-            <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <CardTitle className="text-base font-bold text-foreground">
-                {labels.locationTitle}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {labels.locationBody}
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="bg-white border-border">
-            <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <CardTitle className="text-base font-bold text-foreground">
-                {labels.helpTitle}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {labels.helpBody}
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="bg-white border-border">
-            <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <CardTitle className="text-base font-bold text-foreground">
-                {labels.tipTitle}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {labels.tipBody}
-              </p>
-            </CardContent>
-          </Card>
+          <InfoCard
+            icon={<HelpCircle className="h-5 w-5 text-primary" />}
+            title={labels.locationTitle}
+            body={labels.locationBody}
+          />
+          <InfoCard
+            icon={<HelpCircle className="h-5 w-5 text-primary" />}
+            title={labels.tipTitle}
+            body={labels.tipBody}
+          />
         </section>
       </div>
     </div>
