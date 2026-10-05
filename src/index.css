@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+:root {
+  --unilib-orange: #DC4C2C;
+  --unilib-bg: #FBF9F4;
+  --unilib-text: #2D2D2D;
+
+  --background: #FBF9F4;
+  --foreground: #2D2D2D;
+  --card: #FFFFFF;
+  --card-foreground: #2D2D2D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2D2D;
+  --primary: #DC4C2C;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3EFE6;
+  --secondary-foreground: #2D2D2D;
+  --muted: #EFEBE0;
+  --muted-foreground: #666666;
+  --accent: #F3EFE6;
+  --accent-foreground: #DC4C2C;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5DFD3;
+  --input: #E5DFD3;
+  --ring: #DC4C2C;
+  --radius: 0.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--unilib-bg);
+  color: var(--unilib-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
