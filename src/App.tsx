@@ -43,8 +43,6 @@ export function App() {
           {/* Public pages: same layout, no sign-in required. */}
           <Route element={<AppLayout />}>
             <Route path="/about" element={<AboutPage />} />
-          </Route>
-          <Route element={<AppLayout />}>
             <Route path="/rules" element={<RulesPage />} />
           </Route>
           <Route path="/expired" element={<ExpiredPage />} />

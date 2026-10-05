@@ -44,6 +44,7 @@ export const en = {
     instruction: "Sign in with your university account",
     button: "Sign in with Microsoft",
     signingIn: "Authenticating...",
+    publicLinks: "Browse without signing in",
   },
 
   expired: {

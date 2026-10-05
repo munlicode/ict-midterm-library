@@ -33,6 +33,7 @@ export const ru: PartialTranslations = {
     instruction: "Войдите с помощью вашей университетской учетной записи",
     button: "Войти через Microsoft",
     signingIn: "Аутентификация...",
+    publicLinks: "Просмотр без входа",
   },
 
   expired: {

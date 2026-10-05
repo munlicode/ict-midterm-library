@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { BookOpen } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { BookOpen, Info, List } from "lucide-react";
 import { Button } from "../components/ui/button";
 import {
   Card,
@@ -70,6 +70,27 @@ export const SignInPage: React.FC = () => {
               </>
             )}
           </Button>
+        </CardContent>
+      </Card>
+      <Card className="w-full max-w-md mt-4 bg-white border-border">
+        <CardHeader className="text-center pb-0">
+          <CardDescription>{text.publicLinks}</CardDescription>
+        </CardHeader>
+        <CardContent className="flex gap-3">
+          {[
+            { to: "/about", label: t.nav.about, Icon: Info },
+            { to: "/rules", label: t.nav.rules, Icon: List },
+          ].map(({ to, label, Icon }) => (
+            <Link key={to} to={to} className="flex-1">
+              <Button
+                variant="outline"
+                className="w-full border-border hover:text-primary"
+              >
+                <Icon className="h-4 w-4 mr-1.5 text-primary" />
+                {label}
+              </Button>
+            </Link>
+          ))}
         </CardContent>
       </Card>
     </div>

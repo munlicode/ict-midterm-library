@@ -33,6 +33,7 @@ export const kk: PartialTranslations = {
     instruction: "Университет аккаунтыңызбен кіріңіз",
     button: "Microsoft арқылы кіру",
     signingIn: "Аутентификациялануда...",
+    publicLinks: "Кірмей-ақ қарау",
   },
 
   expired: {
