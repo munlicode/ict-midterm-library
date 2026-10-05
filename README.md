@@ -6,6 +6,8 @@ Open on https://ict-midterm-library.nurzhanmuratkhan.workers.dev
 
 ### Or Scan
 
+![QR](./qr.png)
+
 ## What was implemented
 
 - Lo-fi version of a Uni library assistant.
