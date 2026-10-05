@@ -37,6 +37,9 @@ export function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/book/:id" element={<BookPage />} />
+          </Route>
+          {/* Public pages: same layout, no sign-in required. */}
+          <Route element={<AppLayout />}>
             <Route path="/about" element={<AboutPage />} />
           </Route>
           <Route path="/expired" element={<ExpiredPage />} />
