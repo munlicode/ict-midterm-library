@@ -35,12 +35,12 @@ export const BookPage: React.FC = () => {
         <div className="flex-1 max-w-240 w-full mx-auto px-6 py-12">
           <Link
             to="/search"
-            className="inline-flex items-center text-sm font-semibold text-[#DC4C2C] hover:underline mb-6"
+            className="inline-flex items-center text-sm font-semibold text-primary hover:underline mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-1" />
             {labels.backToSearch}
           </Link>
-          <div className="bg-white border border-[#E5DFD3] rounded-xl p-8 text-center space-y-3">
+          <div className="bg-white border border-border rounded-xl p-8 text-center space-y-3">
             <AlertCircle className="h-10 w-10 text-amber-500 mx-auto" />
             <h2 className="text-xl font-bold text-gray-800">
               {labels.notFound}
@@ -58,18 +58,18 @@ export const BookPage: React.FC = () => {
         {/* Back Link */}
         <Link
           to="/search"
-          className="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-[#DC4C2C] transition-colors mb-6"
+          className="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-primary transition-colors mb-6"
         >
           <ArrowLeft className="h-4 w-4 mr-1.5" />
           {labels.backToSearch}
         </Link>
 
         {/* Main Book Detail Card */}
-        <Card className="bg-white border-[#E5DFD3] p-8 shadow-xs space-y-6">
+        <Card className="bg-white border-border p-8 shadow-xs space-y-6">
           <CardHeader className="p-0 space-y-3">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <CardTitle className="text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] leading-tight">
+                <CardTitle className="text-2xl sm:text-3xl font-extrabold text-foreground leading-tight">
                   {book.title}
                 </CardTitle>
                 <p className="text-lg text-gray-700 font-medium mt-1">
@@ -140,12 +140,12 @@ export const BookPage: React.FC = () => {
                   type="text"
                   readOnly
                   value={permalink}
-                  className="bg-gray-50 border-[#E5DFD3] text-xs font-mono text-gray-600 h-10 select-all"
+                  className="bg-gray-50 border-border text-xs font-mono text-gray-600 h-10 select-all"
                 />
                 <Button
                   onClick={handleCopyLink}
                   variant="outline"
-                  className="shrink-0 h-10 border-[#E5DFD3] hover:border-[#DC4C2C] text-xs font-medium"
+                  className="shrink-0 h-10 border-border hover:border-primary text-xs font-medium"
                 >
                   {copied ? (
                     <>

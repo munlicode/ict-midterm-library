@@ -16,7 +16,7 @@ export const AppLayout: React.FC = () => (
   <TooltipProvider>
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset className="bg-[#FBF9F4] min-h-svh flex flex-col">
+      <SidebarInset className="bg-background min-h-svh flex flex-col">
         <Header />
         <div className="flex-1 flex flex-col">
           <Outlet />
@@ -32,9 +32,9 @@ export const Header: React.FC = () => {
   const { t, lang, nextLang } = useTranslation();
 
   return (
-    <header className="sticky top-0 z-40 flex h-14 shrink-0 items-center gap-2 border-b border-[#E5DFD3] bg-white/90 backdrop-blur px-4">
+    <header className="sticky top-0 z-40 flex h-14 shrink-0 items-center gap-2 border-b border-border bg-white/90 backdrop-blur px-4">
       <SidebarTrigger
-        className="-ml-1 text-gray-700 hover:text-[#DC4C2C]"
+        className="-ml-1 text-gray-700 hover:text-primary"
         aria-label={t.header.openMenu}
       />
       <Separator orientation="vertical" className="mr-1 h-4 md:hidden" />
@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
       {/* Brand shown only on mobile, where the sidebar is hidden */}
       <Link
         to="/home"
-        className="flex items-center gap-1.5 text-[#DC4C2C] font-bold tracking-tight md:hidden"
+        className="flex items-center gap-1.5 text-primary font-bold tracking-tight md:hidden"
       >
         <BookOpen className="h-5 w-5 stroke-[2.5]" />
         <span>{t.common.appName}</span>
@@ -51,10 +51,10 @@ export const Header: React.FC = () => {
       <div className="ml-auto">
         <button
           onClick={nextLang}
-          className="flex items-center gap-1 text-xs font-semibold px-2 py-1 bg-[#F3EFE6] border border-[#E5DFD3] rounded hover:bg-[#EFEBE0] text-gray-700 transition-colors"
+          className="flex items-center gap-1 text-xs font-semibold px-2 py-1 bg-secondary border border-border rounded hover:bg-muted text-gray-700 transition-colors"
           title={t.header.toggleLanguage}
         >
-          <Globe className="h-3.5 w-3.5 text-[#DC4C2C]" />
+          <Globe className="h-3.5 w-3.5 text-primary" />
           <span>{lang}</span>
         </button>
       </div>
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="mt-auto border-t border-[#E5DFD3] py-6 text-center text-sm text-gray-500 bg-[#FBF9F4]">
+    <footer className="mt-auto border-t border-border py-6 text-center text-sm text-gray-500 bg-background">
       <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>{t.footer.copyright}</div>
         <div className="flex items-center gap-2">

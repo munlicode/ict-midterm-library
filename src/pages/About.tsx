@@ -23,7 +23,7 @@ export const AboutPage: React.FC = () => {
       <div className="flex-1 max-w-240 w-full mx-auto px-6 py-8">
         {/* Title Banner */}
         <div className="mb-8">
-          <h1 className="text-3xl font-extrabold text-[#2D2D2D] tracking-tight mb-2">
+          <h1 className="text-3xl font-extrabold text-foreground tracking-tight mb-2">
             {labels.title}
           </h1>
           <p className="text-gray-600">{labels.body}</p>
@@ -31,10 +31,10 @@ export const AboutPage: React.FC = () => {
 
         {/* Quick Links / Info Section */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="bg-white border-[#E5DFD3]">
+          <Card className="bg-white border-border">
             <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <Info className="h-5 w-5 text-[#DC4C2C]" />
-              <CardTitle className="text-base font-bold text-[#2D2D2D]">
+              <Info className="h-5 w-5 text-primary" />
+              <CardTitle className="text-base font-bold text-foreground">
                 {labels.hoursTitle}
               </CardTitle>
             </CardHeader>
@@ -45,10 +45,10 @@ export const AboutPage: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-white border-[#E5DFD3]">
+          <Card className="bg-white border-border">
             <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <HelpCircle className="h-5 w-5 text-[#DC4C2C]" />
-              <CardTitle className="text-base font-bold text-[#2D2D2D]">
+              <HelpCircle className="h-5 w-5 text-primary" />
+              <CardTitle className="text-base font-bold text-foreground">
                 {labels.locationTitle}
               </CardTitle>
             </CardHeader>
@@ -58,10 +58,10 @@ export const AboutPage: React.FC = () => {
               </p>
             </CardContent>
           </Card>
-          <Card className="bg-white border-[#E5DFD3]">
+          <Card className="bg-white border-border">
             <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <HelpCircle className="h-5 w-5 text-[#DC4C2C]" />
-              <CardTitle className="text-base font-bold text-[#2D2D2D]">
+              <HelpCircle className="h-5 w-5 text-primary" />
+              <CardTitle className="text-base font-bold text-foreground">
                 {labels.helpTitle}
               </CardTitle>
             </CardHeader>
@@ -71,10 +71,10 @@ export const AboutPage: React.FC = () => {
               </p>
             </CardContent>
           </Card>
-          <Card className="bg-white border-[#E5DFD3]">
+          <Card className="bg-white border-border">
             <CardHeader className="flex flex-row items-center gap-3 pb-2">
-              <HelpCircle className="h-5 w-5 text-[#DC4C2C]" />
-              <CardTitle className="text-base font-bold text-[#2D2D2D]">
+              <HelpCircle className="h-5 w-5 text-primary" />
+              <CardTitle className="text-base font-bold text-foreground">
                 {labels.tipTitle}
               </CardTitle>
             </CardHeader>

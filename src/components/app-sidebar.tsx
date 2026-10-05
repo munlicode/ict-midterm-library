@@ -38,10 +38,10 @@ export function AppSidebar() {
               render={<Link to="/home" onClick={closeOnMobile} />}
               tooltip={t.common.appName}
             >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-[#DC4C2C] text-white">
+              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-white">
                 <BookOpen className="size-4 stroke-[2.5]" />
               </div>
-              <span className="font-bold text-lg text-[#DC4C2C] tracking-tight">
+              <span className="font-bold text-lg text-primary tracking-tight">
                 {t.common.appName}
               </span>
             </SidebarMenuButton>
@@ -79,7 +79,7 @@ export function AppSidebar() {
           {user && (
             <SidebarMenuItem>
               <div className="flex items-center gap-2 px-2 py-1.5 text-sm group-data-[collapsible=icon]:hidden">
-                <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#F3EFE6] border border-[#E5DFD3] font-semibold text-[#DC4C2C]">
+                <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-secondary border border-border font-semibold text-primary">
                   {user.name.charAt(0)}
                 </div>
                 <div className="grid leading-tight min-w-0">

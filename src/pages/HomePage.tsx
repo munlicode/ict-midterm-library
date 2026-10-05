@@ -54,14 +54,14 @@ export const HomePage: React.FC = () => {
       <div className="flex-1 max-w-240 w-full mx-auto px-6 py-8">
         {/* Welcome Banner */}
         <div className="mb-8">
-          <h1 className="text-3xl font-extrabold text-[#2D2D2D] tracking-tight mb-2">
+          <h1 className="text-3xl font-extrabold text-foreground tracking-tight mb-2">
             {labels.welcome}
           </h1>
           <p className="text-gray-600">{labels.intro}</p>
         </div>
 
         {/* Search Bar Section */}
-        <section className="mb-10 bg-white p-6 rounded-xl border border-[#E5DFD3] shadow-sm">
+        <section className="mb-10 bg-white p-6 rounded-xl border border-border shadow-sm">
           <form onSubmit={handleSearchSubmit} className="flex gap-3">
             <div className="relative flex-1">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -70,12 +70,12 @@ export const HomePage: React.FC = () => {
                 placeholder={labels.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-11 h-12 text-base border-[#E5DFD3] focus-visible:ring-[#DC4C2C] bg-[#FBF9F4]"
+                className="pl-11 h-12 text-base border-border focus-visible:ring-primary bg-background"
               />
             </div>
             <Button
               type="submit"
-              className="bg-[#DC4C2C] hover:bg-[#b83d21] text-white px-6 h-12 font-semibold text-base"
+              className="bg-primary hover:bg-primary-hover text-white px-6 h-12 font-semibold text-base"
             >
               {labels.searchButton}
             </Button>
@@ -84,15 +84,15 @@ export const HomePage: React.FC = () => {
 
         {/* Current Readings Section */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-[#2D2D2D] mb-4 flex items-center gap-2">
-            <BookOpen className="h-5 w-5 text-[#DC4C2C]" />
+          <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <BookOpen className="h-5 w-5 text-primary" />
             {labels.currentReadingsTitle}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {currentReadings.map(({ book, dueDate }) => (
               <Card
                 key={book.id}
-                className="bg-white border-[#E5DFD3] flex flex-col justify-between"
+                className="bg-white border-border flex flex-col justify-between"
               >
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base font-bold text-gray-900 line-clamp-2 leading-snug">

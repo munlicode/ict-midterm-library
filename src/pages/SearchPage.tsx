@@ -69,12 +69,12 @@ export const SearchPage: React.FC = () => {
   return (
     <div className="flex flex-col flex-1">
       <div className="flex-1 max-w-240 w-full mx-auto px-6 py-8">
-        <h1 className="text-3xl font-extrabold text-[#2D2D2D] mb-6">
+        <h1 className="text-3xl font-extrabold text-foreground mb-6">
           {uiLabels.title}
         </h1>
 
         {/* Filter Controls Panel */}
-        <div className="bg-white p-6 rounded-xl border border-[#E5DFD3] shadow-sm mb-8 space-y-4">
+        <div className="bg-white p-6 rounded-xl border border-border shadow-sm mb-8 space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search Input */}
             <div>
@@ -95,7 +95,7 @@ export const SearchPage: React.FC = () => {
                       setSearchParams({});
                     }
                   }}
-                  className="pl-9 h-10 border-[#E5DFD3] text-sm bg-[#FBF9F4]"
+                  className="pl-9 h-10 border-border text-sm bg-background"
                 />
               </div>
             </div>
@@ -108,7 +108,7 @@ export const SearchPage: React.FC = () => {
               <select
                 value={langFilter}
                 onChange={(e) => setLangFilter(e.target.value as any)}
-                className="w-full h-10 px-3 border border-[#E5DFD3] rounded-md text-sm bg-[#FBF9F4] text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#DC4C2C]"
+                className="w-full h-10 px-3 border border-border rounded-md text-sm bg-background text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="ALL">{uiLabels.allLangs}</option>
                 {LANGUAGES.map(({ code }) => (
@@ -127,7 +127,7 @@ export const SearchPage: React.FC = () => {
               <select
                 value={yearFilter}
                 onChange={(e) => setYearFilter(e.target.value as any)}
-                className="w-full h-10 px-3 border border-[#E5DFD3] rounded-md text-sm bg-[#FBF9F4] text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#DC4C2C]"
+                className="w-full h-10 px-3 border border-border rounded-md text-sm bg-background text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="ALL">{uiLabels.allYears}</option>
                 <option value="2020_NEWER">{uiLabels.year2020Newer}</option>
@@ -144,7 +144,7 @@ export const SearchPage: React.FC = () => {
               <select
                 value={availFilter}
                 onChange={(e) => setAvailFilter(e.target.value as any)}
-                className="w-full h-10 px-3 border border-[#E5DFD3] rounded-md text-sm bg-[#FBF9F4] text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#DC4C2C]"
+                className="w-full h-10 px-3 border border-border rounded-md text-sm bg-background text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="ALL">{uiLabels.allAvail}</option>
                 <option value="AVAILABLE">{uiLabels.availOnly}</option>
@@ -166,7 +166,7 @@ export const SearchPage: React.FC = () => {
               variant="ghost"
               size="sm"
               onClick={clearFilters}
-              className="text-xs text-gray-500 hover:text-[#DC4C2C]"
+              className="text-xs text-gray-500 hover:text-primary"
             >
               <RotateCcw className="h-3.5 w-3.5 mr-1" />
               {uiLabels.clearFiltersBtn}
@@ -176,13 +176,13 @@ export const SearchPage: React.FC = () => {
 
         {/* Zero Results Error State */}
         {filteredBooks.length === 0 ? (
-          <div className="bg-white border border-[#E5DFD3] rounded-xl p-12 text-center space-y-4 my-6">
+          <div className="bg-white border border-border rounded-xl p-12 text-center space-y-4 my-6">
             <p className="text-lg font-semibold text-gray-700">
               {uiLabels.noResultsMessage}
             </p>
             <Button
               onClick={clearFilters}
-              className="bg-[#DC4C2C] hover:bg-[#b83d21] text-white px-6 font-medium"
+              className="bg-primary hover:bg-primary-hover text-white px-6 font-medium"
             >
               <RotateCcw className="h-4 w-4 mr-2" />
               {uiLabels.clearFiltersBtn}
@@ -194,14 +194,14 @@ export const SearchPage: React.FC = () => {
             {filteredBooks.map((book: Book) => (
               <Card
                 key={book.id}
-                className="bg-white border-[#E5DFD3] p-4 hover:border-[#DC4C2C]/40 transition-colors shadow-xs"
+                className="bg-white border-border p-4 hover:border-primary/40 transition-colors shadow-xs"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="space-y-1 flex-1">
                     <div className="flex items-center gap-2 flex-wrap">
                       <Link
                         to={`/book/${book.id}`}
-                        className="text-base font-bold text-gray-900 hover:text-[#DC4C2C] transition-colors"
+                        className="text-base font-bold text-gray-900 hover:text-primary transition-colors"
                       >
                         {book.title}
                       </Link>
@@ -236,7 +236,7 @@ export const SearchPage: React.FC = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="text-xs border-[#E5DFD3] hover:text-[#DC4C2C]"
+                        className="text-xs border-border hover:text-primary"
                       >
                         {uiLabels.viewDetails}
                         <ArrowRight className="h-3.5 w-3.5 ml-1" />

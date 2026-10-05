@@ -29,13 +29,13 @@ export const SignInPage: React.FC = () => {
   const text = t.signIn;
 
   return (
-    <div className="min-h-screen bg-[#FBF9F4] flex flex-col items-center justify-center p-4">
-      <Card className="w-full max-w-md bg-white border-[#E5DFD3] shadow-md transition-all transform animate-in fade-in zoom-in-95 duration-500">
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
+      <Card className="w-full max-w-md bg-white border-border shadow-md transition-all transform animate-in fade-in zoom-in-95 duration-500">
         <CardHeader className="text-center pb-2">
           <div className="mx-auto bg-orange-50 w-16 h-16 rounded-full flex items-center justify-center mb-3 border border-orange-100">
-            <BookOpen className="h-10 w-10 text-[#DC4C2C]" />
+            <BookOpen className="h-10 w-10 text-primary" />
           </div>
-          <CardTitle className="text-3xl font-extrabold text-[#2D2D2D] tracking-tight">
+          <CardTitle className="text-3xl font-extrabold text-foreground tracking-tight">
             {t.common.appName}
           </CardTitle>
           <CardDescription className="text-gray-600 mt-1 font-medium">
@@ -47,7 +47,7 @@ export const SignInPage: React.FC = () => {
           <Button
             disabled={isLoading}
             onClick={handleSignIn}
-            className="w-full bg-[#DC4C2C] hover:bg-[#b83d21] text-white font-semibold py-6 text-base shadow-sm transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-80"
+            className="w-full bg-primary hover:bg-primary-hover text-white font-semibold py-6 text-base shadow-sm transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-80"
           >
             {isLoading ? (
               <div className="flex items-center justify-center gap-2">
